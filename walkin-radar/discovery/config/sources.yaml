@@ -1,0 +1,13 @@
+# Discovery sources. Only sources with allowed: true are ever fetched.
+# A source may be enabled only after its terms of use and robots.txt were checked by a person.
+# Replace YOUR_EMAIL with a contact address; it appears in the User-Agent header.
+user_agent: "WalkInRadarBot/0.1 (+mailto:YOUR_EMAIL)"
+request_delay_seconds: 5
+
+sources:
+  - name: "First company careers page (pending approval)"
+    url: "https://REPLACE-WITH-CAREERS-PAGE/"
+    parser: "template"          # must match a key in walkin_discovery/parsers/__init__.py
+    allowed: false              # flip to true only after terms + robots check
+    terms_checked_on: null      # YYYY-MM-DD, recorded by the person who checked
+    notes: "Chosen from official careers pages hiring freshers in Delhi NCR. Not yet verified."
